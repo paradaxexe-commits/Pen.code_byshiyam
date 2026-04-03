@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Shiyam Pen Code</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="initFiles(); showDefaultScreen();">
+
+<!-- 🔥 START SCREEN -->
+<div id="startScreen" style="
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  color:white;
+  flex-direction:column;
+  z-index:1000;
+">
+
+  <h1 style="font-size:40px;">🚀 Shiyam Pen Code</h1>
+  <button onclick="startCoding()" style="
+    padding:15px 30px;
+    font-size:18px;
+    background:#00c853;
+    border:none;
+    cursor:pointer;
+    margin-top:20px;
+  ">
+    Start Coding
+  </button>
+
+</div>
+
+<div class="sidebar">
+  <button onclick="startCoding()">🚀 Start Coding</button>
+  <button onclick="runCode()">▶ Run</button>
+
+  <hr>
+  <h4>📁 Files</h4>
+  <ul id="fileList"></ul>
+
+  <button onclick="newFile()">➕ New File</button>
+  <button onclick="renameFile()">✏ Rename</button>
+  <button onclick="saveFile()">💾 Save</button>
+</div>
+
+<div class="main">
+
+  <!-- Editors -->
+  <div class="editors" id="editors" style="display:none;">
+    <textarea id="html" placeholder="HTML code..."></textarea>
+    <textarea id="css" placeholder="CSS code..."></textarea>
+    <textarea id="js" placeholder="JavaScript code..."></textarea>
+  </div>
+
+  <!-- Output -->
+  <iframe id="output"></iframe>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
